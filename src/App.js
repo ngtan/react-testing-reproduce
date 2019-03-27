@@ -4,6 +4,8 @@ import './App.css';
 
 class App extends Component {
   render() {
+    const { loading } = this.props;
+
     return (
       <div className="App">
         <header className="App-header">
@@ -20,6 +22,11 @@ class App extends Component {
             Learn React
           </a>
         </header>
+        <form>
+          <button type="submit" disabled={loading} data-testid="submit-btn">
+            Hello
+          </button>
+        </form>
       </div>
     );
   }
